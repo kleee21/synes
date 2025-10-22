@@ -1,0 +1,143 @@
+/* css/style.css */
+
+/* --- 1. Custom Fonts (Oswald & Cabin) --- */
+.font-bungee { 
+    /* Font Judul (Oswald) */
+    font-family: 'Oswald', sans-serif; 
+}
+.font-cabin { 
+    /* Font Teks Biasa (Cabin) */
+    font-family: 'Cabin', sans-serif; 
+}
+
+/* --- 2. Navbar Styling Custom --- */
+/* Navbar initial state (saat di atas halaman) */
+.navbar-initial {
+    background-color: rgba(26, 35, 126, 0.7); 
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease-in-out;
+}
+/* Navbar scrolled state (saat di-scroll ke bawah) */
+.navbar-scrolled {
+    background-color: rgba(26, 35, 126, 0.2); 
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+}
+#navbar {
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- 3. Home Page (index.html) Custom Styles FINAL --- */
+
+/* Hero Background Menggunakan Gambar Baru */
+.hero-gajah-bg {
+    background-image: url('../assets/bg.jpg'); 
+    background-size: cover;
+    background-position: center bottom; 
+    background-attachment: fixed; 
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Teks Tagline Shadow Disesuaikan untuk keterbacaan di atas gambar */
+.tagline-shadow {
+    text-shadow: 
+        0 0 5px #000000, 
+        0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* --- CONTENT SECTION STYLING --- */
+
+/* Background Biru Lebih Gelap Solid */
+.section-bg-dark-blue {
+    background-color: #121A52; /* Biru Indigo yang lebih gelap */
+}
+
+/* Styling Kartu Konten */
+.card-content-feature {
+    background-color: #1A237E; /* Kontras dengan section-bg-dark-blue */
+    padding-bottom: 24px; 
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    border: 1px solid #3F51B5;
+}
+.card-content-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -5px rgba(255, 255, 255, 0.2);
+}
+/* Styling Teks di dalam Kartu */
+.card-content-feature h4 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.card-content-feature p {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* Styling Frame Foto */
+.card-photo-frame {
+    height: 128px; /* h-32 (di kartu maskot diubah ke h-40/160px via inline style) */
+    background-color: #3F51B5; /* Warna default jika gambar gagal dimuat */
+    
+    /* PENTING: Pengaturan agar gambar tidak terpotong */
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+    border-bottom: 4px solid #FFEB3B; 
+}
+
+/* Animasi Tombol Discover */
+.pulse-button {
+    animation: pulse-red 2s infinite;
+}
+
+/* --- 4. Keyframe Animations --- */
+
+/* Animasi Skala untuk Logo (Masuk ke layar) */
+@keyframes scale-up-logo {
+    from { opacity: 0; transform: scale(0.7) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.animate-scale-up-logo {
+    animation: scale-up-logo 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s backwards;
+}
+
+/* Animasi Fade In Up */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 20px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.animate-fadeInUp {
+    animation: fadeInUp 1s ease-out 1.8s backwards; 
+}
+
+/* Animasi Tombol Pulse */
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(244, 67, 54, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0); }
+}
+
+/* --- 5. Custom Styles untuk Halaman Lain (Dipertahankan) --- */
+
+.bg-pattern {
+    background: linear-gradient(180deg, #1A237E 0%, #303F9F 100%);
+    background-attachment: fixed;
+}
+.title-shape {
+    background-color: #F44336; 
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+    padding: 20px 40px;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+/* ... (Gaya halaman lain) ... */
+.panitia-foto {
+    clip-path: circle(50% at 50% 50%);
+    border: 5px solid #F44336; 
+}
