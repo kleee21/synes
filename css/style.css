@@ -1,64 +1,150 @@
 /* css/style.css */
 
-/* --- 1. Custom Fonts (Oswald & Cabin) --- */
+/* ===================================== */
+/* 1. CUSTOM FONTS & BASE STYLES         */
+/* ===================================== */
 .font-bungee { 
-    /* Font Judul (Oswald) */
+    /* Font Judul (Oswald dari Google Fonts) */
     font-family: 'Oswald', sans-serif; 
 }
 .font-cabin { 
-    /* Font Teks Biasa (Cabin) */
+    /* Font Teks Biasa (Cabin dari Google Fonts) */
     font-family: 'Cabin', sans-serif; 
 }
 
-/* --- 2. Navbar Styling Custom --- */
-/* Navbar initial state (saat di atas halaman) */
-.navbar-initial {
-    background-color: rgba(26, 35, 126, 0.7); 
-    backdrop-filter: blur(8px);
-    transition: all 0.3s ease-in-out;
+/* Memastikan elemen body tidak memiliki margin/padding bawaan */
+body {
+    margin: 0;
+    padding: 0;
 }
-/* Navbar scrolled state (saat di-scroll ke bawah) */
-.navbar-scrolled {
-    background-color: rgba(26, 35, 126, 0.2); 
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease-in-out;
-}
+
+/* ===================================== */
+/* 2. NAVBAR STYLING CUSTOM              */
+/* ===================================== */
 #navbar {
     transition: all 0.3s ease-in-out;
 }
+.navbar-initial {
+    /* Sedikit lebih buram saat di atas halaman */
+    background-color: rgba(26, 35, 126, 0.7); 
+    backdrop-filter: blur(8px);
+}
+.navbar-scrolled {
+    /* Lebih transparan saat di-scroll ke bawah */
+    background-color: rgba(26, 35, 126, 0.2); 
+    backdrop-filter: blur(10px);
+}
 
-/* --- 3. Home Page (index.html) Custom Styles FINAL --- */
+/* ===================================== */
+/* 3. FIX LOADING SCREEN & SCROLL LOCK   */
+/* ===================================== */
 
-/* Hero Background Menggunakan Gambar Baru */
+/* PENTING: Class ini mencegah body bergerak saat loading screen aktif */
+.no-scroll {
+    overflow: hidden !important; 
+    height: 100vh !important;
+}
+
+#loading-screen {
+    /* FIX: Memastikan menutupi seluruh layar dan fixed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Z-index harus sangat tinggi (di atas navbar Z-50 = 9999) */
+    z-index: 9999; 
+    
+    background-color: #1a237e; /* Warna Indigo-900 */
+
+    /* Memastikan konten di dalamnya (logo & teks) ada di tengah sempurna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Tailwind class: transition-opacity duration-500 */
+    transition: opacity 0.5s ease;
+}
+
+/* ===================================== */
+/* 4. ANIMASI TRANSISI HALAMAN           */
+/* ===================================== */
+
+@keyframes page-transition-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes page-transition-out {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+}
+
+/* Class yang diterapkan pada <body> */
+.page-transition-in {
+    animation: page-transition-in 1s ease-out forwards;
+}
+.page-transition-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Keyframes untuk konten halaman LATAR BELAKANG */
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-logo-fade-in {
+    animation: fadeInSlideUp 0.6s ease-out forwards;
+}
+.animate-title-fade-in {
+    animation: fadeInSlideUp 0.6s ease-out forwards;
+}
+.animate-subtitle-fade-in {
+    animation: fadeInSlideUp 0.6s ease-out forwards;
+}
+.page-content-fade-in {
+    opacity: 0; 
+    animation: fadeInSlideUp 0.6s ease-out forwards;
+}
+
+
+/* ===================================== */
+/* 5. CUSTOM HERO & SECTION STYLES       */
+/* ===================================== */
+
+/* Hero Home Background */
 .hero-gajah-bg {
     background-image: url('../assets/bg.jpg'); 
     background-size: cover;
     background-position: center bottom; 
-    background-attachment: fixed; 
+    background-attachment: fixed; /* Penting untuk stabilitas scroll */
     min-height: 100vh;
     position: relative;
     overflow: hidden; 
 }
-
-/* Teks Tagline Shadow Disesuaikan untuk keterbacaan di atas gambar */
 .tagline-shadow {
+    /* Memberi efek bayangan pada teks tagline agar menonjol */
     text-shadow: 
         0 0 5px #000000, 
         0 0 10px rgba(255, 255, 255, 0.8);
 }
-
-/* --- CONTENT SECTION STYLING --- */
-
-/* Background Biru Lebih Gelap Solid */
 .section-bg-dark-blue {
-    background-color: #121A52; /* Biru Indigo yang lebih gelap */
+    background-color: #121A52; /* Warna dasar konten */
+}
+.title-shadow {
+    /* Bayangan untuk judul besar di Latar Belakang */
+    text-shadow: 0 4px 10px rgba(244, 67, 54, 0.8);
 }
 
-/* Styling Kartu Konten */
+/* Card Content Styling */
 .card-content-feature {
-    background-color: #1A237E; /* Kontras dengan section-bg-dark-blue */
+    background-color: #1A237E; /* Indigo 800 */
     padding-bottom: 24px; 
-    border-radius: 0.75rem; /* rounded-xl */
+    border-radius: 0.75rem; 
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
     overflow: hidden; 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s;
@@ -68,76 +154,26 @@
     transform: translateY(-5px);
     box-shadow: 0 15px 30px -5px rgba(255, 255, 255, 0.2);
 }
-/* Styling Teks di dalam Kartu */
-.card-content-feature h4 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
+.card-content-feature h4, 
 .card-content-feature p {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
-
-/* Styling Frame Foto */
 .card-photo-frame {
-    height: 128px; /* h-32 (di kartu maskot diubah ke h-40/160px via inline style) */
-    background-color: #3F51B5; /* Warna default jika gambar gagal dimuat */
-    
-    /* PENTING: Pengaturan agar gambar tidak terpotong */
+    height: 128px; 
+    background-color: #3F51B5; 
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: center; 
-    
     border-bottom: 4px solid #FFEB3B; 
 }
 
-/* Animasi Tombol Discover */
+/* Tombol Pulse */
 .pulse-button {
     animation: pulse-red 2s infinite;
 }
-
-/* --- 4. Keyframe Animations --- */
-
-/* Animasi Skala untuk Logo (Masuk ke layar) */
-@keyframes scale-up-logo {
-    from { opacity: 0; transform: scale(0.7) translateY(20px); }
-    to { opacity: 1; transform: scale(1) translateY(0); }
-}
-.animate-scale-up-logo {
-    animation: scale-up-logo 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s backwards;
-}
-
-/* Animasi Fade In Up */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translate3d(0, 20px, 0); }
-    to { opacity: 1; transform: translate3d(0, 0, 0); }
-}
-.animate-fadeInUp {
-    animation: fadeInUp 1s ease-out 1.8s backwards; 
-}
-
-/* Animasi Tombol Pulse */
 @keyframes pulse-red {
     0% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7); }
     70% { box-shadow: 0 0 0 15px rgba(244, 67, 54, 0); }
     100% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0); }
-}
-
-/* --- 5. Custom Styles untuk Halaman Lain (Dipertahankan) --- */
-
-.bg-pattern {
-    background: linear-gradient(180deg, #1A237E 0%, #303F9F 100%);
-    background-attachment: fixed;
-}
-.title-shape {
-    background-color: #F44336; 
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
-    padding: 20px 40px;
-    display: inline-block;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-/* ... (Gaya halaman lain) ... */
-.panitia-foto {
-    clip-path: circle(50% at 50% 50%);
-    border: 5px solid #F44336; 
 }
