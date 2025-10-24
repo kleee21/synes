@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synesthesia | Galeri - Our Moments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body class="bg-indigo-900 text-white font-cabin overflow-x-hidden page-transition-out"> 
+
+    <nav id="navbar" class="fixed w-full z-50 p-4 transition duration-300 navbar-initial">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-10 md:h-12 w-auto logo-navbar-static"> 
+            </a>
+            <div class="hidden md:flex space-x-6 lg:space-x-10">
+                <a href="index.html" class="nav-link text-lg font-bold hover:text-yellow-400 transition">Home</a>
+                <a href="latar-belakang.html" class="nav-link text-lg font-bold hover:text-yellow-400 transition">Latar Belakang</a>
+                <a href="galeri.html" class="nav-link text-lg font-bold text-yellow-400 hover:text-red-500 transition border-b-2 border-yellow-400">Galeri</a>
+                <a href="panitia.html" class="nav-link text-lg font-bold hover:text-yellow-400 transition">Panitia</a>
+            </div>
+            <button id="hamburger-menu" class="md:hidden text-white focus:outline-none p-2">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-indigo-800/90 rounded-xl p-4 shadow-xl">
+            <a href="index.html" class="block py-2 text-white hover:text-yellow-400 font-bold border-b border-indigo-700">Home</a>
+            <a href="latar-belakang.html" class="block py-2 text-white hover:text-yellow-400 font-bold border-b border-indigo-700">Latar Belakang</a>
+            <a href="galeri.html" class="block py-2 text-yellow-400 hover:text-red-500 font-bold border-b border-indigo-700">Galeri</a>
+            <a href="panitia.html" class="block py-2 text-white hover:text-yellow-400 font-bold">Panitia</a>
+        </div>
+    </nav>
+    
+    <header class="pt-24 pb-16 section-bg-dark-blue text-center header-page">
+        <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="w-20 h-auto mx-auto mb-4" style="opacity: 0; animation: fadeInSlideUp 0.6s ease-out 0.2s forwards;">
+        <h1 class="text-6xl md:text-8xl font-bungee text-red-500 title-shadow tracking-wider" style="opacity: 0; animation: fadeInSlideUp 0.6s ease-out 0.4s forwards;">GALERI FOTO</h1>
+        <p class="text-xl text-yellow-400 mt-2" style="opacity: 0; animation: fadeInSlideUp 0.6s ease-out 0.6s forwards;">Momen Terbaik dan Paling Berkesan dari Synesthesia</p>
+    </header>
+
+    <section class="py-16 px-4 md:px-8 bg-indigo-900 page-content-fade-in content-start-offset">
+        <div class="max-w-7xl mx-auto">
+            
+            <h2 class="text-4xl font-bungee text-center text-yellow-400 mb-12 border-b-4 border-yellow-400 inline-block px-4 pb-2 mx-auto">Album Tahun 2024</h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="gallery-item-new">
+                    <img src="assets/stage-view.jpg" alt="Foto Panggung Utama" class="rounded-t-xl">
+                    <div class="gallery-item-new-content">
+                        <h4 class="text-2xl text-red-400">Panggung Epik & Konser 🎤</h4>
+                        <ul>
+                            <li>Penampilan *headliner* Hivi!</li>
+                            <li>Pencahayaan panggung yang spektakuler.</li>
+                            <li>Sorakan meriah dari penonton.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gallery-item-new">
+                    <img src="assets/bazaar-food.jpg" alt="Foto Kerumunan Penonton" class="rounded-t-xl">
+                    <div class="gallery-item-new-content">
+                        <h4 class="text-2xl text-yellow-400">Antusiasme Penonton 🎉</h4>
+                        <ul>
+                            <li>Interaksi dekat dengan Aruma.</li>
+                            <li>Laut manusia di area festival.</li>
+                            <li>Momen kebersamaan di *food court*.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gallery-item-new">
+                    <img src="assets/dance-group.jpg" alt="Foto Backstage" class="rounded-t-xl">
+                    <div class="gallery-item-new-content">
+                        <h4 class="text-2xl text-green-400">Tari dan Ekspresi 💃</h4>
+                        <ul>
+                            <li>Penampilan tari kontemporer yang unik.</li>
+                            <li>Kostum warna-warni dan dinamis.</li>
+                            <li>Panggung ekspresi seni rupa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gallery-item-new">
+                    <img src="assets/band-performance.jpg" alt="Foto Pameran Seni" class="rounded-t-xl">
+                    <div class="gallery-item-new-content">
+                        <h4 class="text-2xl text-blue-400">Band Lokal & Bakat 🎸</h4>
+                        <ul>
+                            <li>Aksi panggung band-band sekolah.</li>
+                            <li>Area jajan dan *stand* merchandise.</li>
+                            <li>Kekompakan tim panitia.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gallery-item-new">
+                    <img src="assets/all-mascots.jpg" alt="Foto Bazaar" class="rounded-t-xl">
+                    <div class="gallery-item-new-content">
+                        <h4 class="text-2xl text-pink-400">Maskot & Komunitas 🧑‍🤝‍🧑</h4>
+                        <ul>
+                            <li>Sesi foto bersama Zaga dan Lala.</li>
+                            <li>Area komunitas game dan hobi.</li>
+                            <li>Suasana menjelang malam.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="gallery-item-new">
+                    <img src="assets/artist-hivi.jpg" alt="Foto Tari" class="rounded-t-xl">
+                    <div class="gallery-item-new-content">
+                        <h4 class="text-2xl text-indigo-400">Momen Puncak 🌟</h4>
+                        <ul>
+                            <li>Penampilan utama Hivi! dan Aruma.</li>
+                            <li>Pesta kembang api penutup.</li>
+                            <li>Semua panitia berkumpul di panggung.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="index.html" class="inline-block text-xl text-yellow-400 hover:text-red-500 transition font-bold underline">&larr; Kembali ke Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-indigo-900 p-6 text-center border-t-4 border-yellow-400">
+        <p class="text-gray-400 text-sm">© 2024 Synesthesia - OSIS SMA Talenta Bandung. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
