@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Cabin:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"> 
 </head>
-<body class="bg-indigo-900 text-white font-cabin overflow-x-hidden page-transition-out">
+<body class="bg-indigo-900 text-white font-cabin overflow-x-hidden page-transition-out"> 
 
     <nav id="navbar" class="fixed w-full z-50 p-4 transition duration-300 navbar-initial">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -32,64 +32,79 @@
             <a href="panitia.html" class="block py-2 text-white hover:text-yellow-400 font-bold">Panitia</a>
         </div>
     </nav>
-
-    <header class="pt-32 pb-16 section-bg-dark-blue text-center">
-        <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="w-20 h-auto mx-auto mb-4 opacity-0 animate-logo-fade-in" style="animation-delay: 0.5s;">
-        <h1 class="text-6xl md:text-8xl font-bungee text-red-500 title-shadow tracking-wider opacity-0 animate-title-fade-in" style="animation-delay: 0.2s;">LATAR BELAKANG</h1>
-        <p class="text-xl text-yellow-400 mt-2 opacity-0 animate-subtitle-fade-in" style="animation-delay: 0.8s;">Mengapa Synesthesia hadir, dan apa tujuan kami?</p>
+    
+    <header class="pt-24 pb-16 section-bg-dark-blue text-center header-page"> 
+        <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="w-20 h-auto mx-auto mb-4" style="opacity: 0; animation: fadeInSlideUp 0.6s ease-out 0.2s forwards;">
+        <h1 class="text-6xl md:text-8xl font-bungee text-red-500 title-shadow tracking-wider" style="opacity: 0; animation: fadeInSlideUp 0.6s ease-out 0.4s forwards;">LATAR BELAKANG</h1>
+        <p class="text-xl text-yellow-400 mt-2" style="opacity: 0; animation: fadeInSlideUp 0.6s ease-out 0.6s forwards;">Filosofi, Visi, Misi, dan Sejarah Festival</p>
     </header>
 
-    <section class="py-20 px-4 md:px-8 bg-indigo-900">
-        <div class="max-w-6xl mx-auto">
-
-            <h2 class="text-4xl font-bungee text-yellow-400 mb-6 border-b-4 border-yellow-400 inline-block pb-1 page-content-fade-in" style="animation-delay: 1.0s;">FILOSOFI SYNESTHESIA</h2>
+    <section class="py-16 px-4 md:px-8 bg-indigo-900 page-content-fade-in content-start-offset"> 
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
             
-            <div class="grid md:grid-cols-2 gap-8 page-content-fade-in" style="animation-delay: 1.2s;">
-                <div class="bg-indigo-800 p-6 rounded-xl shadow-2xl border-l-4 border-red-500 transition duration-300 hover:shadow-red-500/50">
-                    <h3 class="text-2xl font-bungee text-red-500 mb-3">Apa itu Synesthesia?</h3>
-                    <p class="text-gray-200 leading-relaxed">
-                        Secara harfiah, Synesthesia adalah kondisi neurologis di mana stimulasi dari satu indra memicu pengalaman otomatis di indra lainnya. Misalnya, mendengar musik dapat memicu persepsi warna. 
-                        Filosofi ini kami bawa ke dalam festival, di mana **Seni (Visual), Musik (Audio), dan Gerak (Kinetik)** saling berkolaborasi, menciptakan pengalaman multisensori yang lengkap dan mendalam bagi semua pengunjung.
+            <div class="space-y-8">
+                 <h2 class="text-4xl font-bungee text-center text-yellow-400 mb-6 border-b-4 border-yellow-400 inline-block px-4 pb-2 mx-auto block w-fit">Visi & Misi</h2>
+                 
+                 <div class="card-content-feature p-6">
+                     <h3 class="text-3xl font-bungee text-red-400 mb-3">Visi Kami</h3>
+                     <p class="text-lg text-gray-200 leading-relaxed">
+                         Menjadi festival seni dan kreativitas terdepan di Jawa Barat yang memberdayakan bakat muda, menumbuhkan apresiasi terhadap seni, dan menjadi platform kolaborasi multi-disiplin.
+                     </p>
+                 </div>
+                 
+                 <div class="card-content-feature p-6">
+                     <h3 class="text-3xl font-bungee text-green-400 mb-3">Misi Kami</h3>
+                     <ul class="list-disc list-inside text-lg text-gray-200 space-y-2 pl-4">
+                         <li>Mengadakan acara yang inklusif dan berkualitas tinggi setiap tahun.</li>
+                         <li>Menyediakan panggung bagi talenta seni rupa, musik, tari, dan sastra lokal.</li>
+                         <li>Menciptakan lingkungan yang mendorong eksperimen artistik dan inovasi.</li>
+                     </ul>
+                 </div>
+            </div>
+            
+            <div class="space-y-8">
+                <h2 class="text-4xl font-bungee text-center text-yellow-400 mb-6 border-b-4 border-yellow-400 inline-block px-4 pb-2 mx-auto block w-fit">Filosofi & Sejarah</h2>
+                
+                <div class="card-content-feature p-6">
+                    <h3 class="text-3xl font-bungee text-blue-400 mb-3">Filosofi Synesthesia</h3>
+                    <p class="text-lg text-gray-200 leading-relaxed">
+                        "Synesthesia" adalah penggabungan indra, mencerminkan semangat festival untuk menyatukan berbagai bentuk seni—musik, warna, gerakan, dan rasa—dalam satu pengalaman holistik. Kami percaya setiap individu memiliki palet jiwa yang unik. Festival ini adalah wadah untuk **"Enlighten the Nurtures of Talent Within the Soul's Palette,"** mengeluarkan bakat tersembunyi, dan mengapresiasi kreativitas tanpa batas.
                     </p>
                 </div>
-
-                <div class="bg-indigo-800 p-6 rounded-xl shadow-2xl border-l-4 border-yellow-500 transition duration-300 hover:shadow-yellow-500/50">
-                    <h3 class="text-2xl font-bungee text-yellow-500 mb-3">Visi Kami</h3>
-                    <ul class="space-y-3 text-gray-200 list-disc list-inside">
-                        <li>Menjadi wadah utama ekspresi seni dan bakat siswa/i SMA Talenta.</li>
-                        <li>Menciptakan ruang kolaborasi antara berbagai jenis seni.</li>
-                        <li>Memperkenalkan budaya dan kreativitas lokal kepada masyarakat luas.</li>
+                
+                <div class="card-content-feature p-6">
+                    <h3 class="text-3xl font-bungee text-red-400 mb-3">Sejarah Singkat</h3>
+                    <ul class="list-disc list-inside text-lg text-gray-200 space-y-2 pl-4">
+                        <li>**2020:** Dicetuskan sebagai festival seni virtual pertama di sekolah saat pandemi, sukses menarik 500+ partisipan online.</li>
+                        <li>**2022:** Diadakan secara *hybrid*, mengombinasikan pameran seni fisik dan konser virtual.</li>
+                        <li>**2023:** Pertama kali digelar secara *full-offline* dengan tiket terjual habis, menampilkan artis nasional dan 15 band lokal.</li>
+                        <li>**2024:** Kami hadir lebih besar, lebih berani, dengan tema yang berfokus pada eksplorasi budaya dan teknologi, menjadikan ini edisi terbaik yang pernah ada.</li>
                     </ul>
                 </div>
-            </div>
-            
-            <div class="h-12"></div>
-
-            <h2 class="text-4xl font-bungee text-red-500 mb-6 border-b-4 border-red-500 inline-block pb-1 page-content-fade-in" style="animation-delay: 1.4s;">TUJUAN ACARA</h2>
-            
-            <div class="bg-indigo-800 p-8 rounded-xl shadow-2xl border-t-4 border-yellow-400 page-content-fade-in" style="animation-delay: 1.6s;">
-                <p class="text-lg text-gray-100 mb-6 leading-relaxed">
-                    Synesthesia diadakan dengan tujuan utama untuk merayakan keberagaman talenta muda. Melalui festival ini, kami berupaya mencapai beberapa hal kunci:
-                </p>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="text-center p-4 bg-indigo-900 rounded-lg shadow-inner border border-red-400">
-                        <span class="text-4xl text-yellow-400 block mb-2">🎤</span>
-                        <p class="font-bold text-sm text-white">Memberi Panggung Ekspresi Diri</p>
-                    </div>
-                    <div class="text-center p-4 bg-indigo-900 rounded-lg shadow-inner border border-green-400">
-                        <span class="text-4xl text-yellow-400 block mb-2">🤝</span>
-                        <p class="font-bold text-sm text-white">Mendorong Kolaborasi Antar Seni</p>
-                    </div>
-                    <div class="text-center p-4 bg-indigo-900 rounded-lg shadow-inner border border-blue-400">
-                        <span class="text-4xl text-yellow-400 block mb-2">🌟</span>
-                        <p class="font-bold text-sm text-white">Meningkatkan Apresiasi Seni Lokal</p>
-                    </div>
-                </div>
-                <p class="text-gray-200 mt-6 text-sm italic text-right">
-                    Kami percaya bahwa setiap bakat patut dirayakan.
-                </p>
-            </div>
+           </div>
         </div>
+        
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-indigo-700">
+            <h2 class="text-4xl font-bungee text-center text-red-500 mb-8">Tujuan Festival</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center p-4 bg-indigo-800 rounded-lg shadow-inner border border-red-400">
+                    <span class="text-4xl text-yellow-400 block mb-2">🎤</span>
+                    <p class="font-bold text-lg text-white">Memberi Panggung Ekspresi Diri</p>
+                </div>
+                <div class="text-center p-4 bg-indigo-800 rounded-lg shadow-inner border border-green-400">
+                    <span class="text-4xl text-yellow-400 block mb-2">🤝</span>
+                    <p class="font-bold text-lg text-white">Mendorong Kolaborasi Antar Seni</p>
+                </div>
+                <div class="text-center p-4 bg-indigo-800 rounded-lg shadow-inner border border-blue-400">
+                    <span class="text-4xl text-yellow-400 block mb-2">🌟</span>
+                    <p class="font-bold text-lg text-white">Meningkatkan Apresiasi Seni Lokal</p>
+                </div>
+            </div>
+            <p class="text-gray-200 mt-6 text-sm italic text-right">
+                Kami percaya bahwa setiap bakat patut dirayakan.
+            </p>
+        </div>
+        
     </section>
 
     <footer class="bg-indigo-900 p-6 text-center border-t-4 border-yellow-400">
